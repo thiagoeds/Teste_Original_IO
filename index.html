@@ -42,12 +42,14 @@
                 <div class="menu-compras">                    
         
                     <div class="busca">
-                        <a href="#Busca"><img src="./img/header/busca.png" alt="Lupa"></a>
+                        <img src="./img/header/busca.png" alt="Lupa">
+                       <!--  <a href="#Busca"></a> -->
                         <input type="text" placeholder="Busca">
                     </div>                                      
 
-                    <div class="sacola">                        
-                        <a class="box-imagem" href="#carrinho"><img src="./img/header/sacola.png" alt="Carrinho"></a>
+                    <div class="sacola">  
+                        <img onclick="abrircarrinho()" src="./img/header/sacola.png" alt="Carrinho">                      
+                        <!-- <a class="box-imagem" href="#carrinho"></a> -->
                         <span>0</span>
                     </div>
 
@@ -142,13 +144,31 @@
 
                 <div class="tamanho">
                     <div class="tamanho-selecionado">
-                        <p class="tamanho-selecao">Tamanho:</p>
-                        <p class="tamanho-escolhido">37</p>
-                        <a class="medidas" href="#">Guia de medidas</a>
+                        <div id="tamanho1">
+                            <p class="tamanho-selecao">Tamanho:</p>
+                            <p id="tamanhoEscolhido" class="tamanho-escolhido"></p>
+                        </div>
+
+                        <div id="tamanho2">
+                            <a class="medidas" href="#">Guia de medidas</a>
+                        </div>
                     </div> 
                     
                     <div class="tabela-selecao">
-                        <ul>
+
+                        <button onclick="container33()" class="container-33">33</button>
+                        <button onclick="container34()" class="container-33">34</button>
+                        <button onclick="container35()" class="container-33">35</button>
+                        <button onclick="container36()" class="container-33">36</button>
+                        <button onclick="container37()" class="container-33">37</button>
+                        <button onclick="container38()" class="container-33">38</button>
+                        <button onclick="container39()" class="container-33">39</button>
+                        <button onclick="container40()" class="container-33">40</button>
+                        <button onclick="container41()" class="container-33">41</button>
+                        <button onclick="container42()" class="container-33">42</button>
+                        
+
+                       <!--  <ul>
                             <li class="container-33"><a href=modifier="link" >33</a></li>
                             <li class="container-34"><a href="#">34</a></li>
                             <li class="container-35"><a href="#">35</a></li>
@@ -159,12 +179,12 @@
                             <li class="container-40"><a href="#">40</a></li>
                             <li class="container-41"><a href="#">41</a></li>
                             <li class="container-42"><a href="#">42</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
 
                 <div class="botao-adicionar">
-                    <a class="adicionar" href="#"><button type="submit">adicionar à sacola</button></a>
+                    <button onclick="abrirmodal()" type="submit">adicionar à sacola</button>
                 </div>
 
                 <div class="info-produto">
@@ -185,17 +205,17 @@
 
                 <div class="box-modal">
 
-                    <div class="modal">¨
+                    <div class="modal">
 
                         <div class="botao-fechar">
-                            <a data-anime="1200" href="index.html"><img src="./img/minicart/cinza-X.png" alt="Botão fechar"></a>
+                            <img onclick="fecharmodal()" src="./img/minicart/cinza-X.png" alt="Botão fechar">
                         </div>
                         
                         <div class="finalizar">
                             <img src="./img/prod-principal.png" alt="Rasteira tira dedo">
                             <p>Produto adicionado com sucesso!</p>
-                            <button class="finalizar-compra"><a href="#">Finalizar compra</a></button>
-                            <button class="continuar-comprando"><a href="#">Continuar Comprando</a></button>
+                            <button onclick="abrircarrinho()" class="finalizar-compra">Finalizar compra</button>
+                            <button onclick="fecharmodal()" class="continuar-comprando">Continuar Comprando</button>
                         </div>
                         
                     </div>
@@ -223,7 +243,7 @@
                                 </div>
     
                                 <div class="botao-fechar-carrinho">
-                                    <a href="index.html"><img src="./img/minicart/cinza-X.png" alt="Botão fechar"></a>
+                                    <img  onclick="fecharcarrinho()" src="./img/minicart/cinza-X.png" alt="Botão fechar">
                                 </div>
     
                             </div>
@@ -343,7 +363,7 @@
                                 </div>
 
                                 <div class="btn">
-                                    <button class="btn-finalizar"><a href="#">Finalizar compra</a></button>
+                                    <button  onclick="fecharcarrinho()" class="btn-finalizar">Finalizar compra</button>
                                 </div>                                
                                 
                             </div>
@@ -366,38 +386,99 @@
             <div class="sugestao-produto">    
                 <div>
                     <img src="./img/prod-bolsa.png" alt="Bolsa">
-                    <p>R$ 204,90</p>
-                    <div class="cores">
-                        <div class="container cores-1"><span class="cor-1"></span></div>
-                        <div class="container cores-2"><span class="cor-2"></span></div>
-                        <div class="container cores-3"><span class="cor-3"></span></div>
-                        <div class="container cores-4"><span class="cor-4"></span></div>
+
+                    <div class="sugestao-produto-pc">
+                        <div>
+                            <p>R$ 204,90</p>
+                        </div>
+                        <div class="cores">
+                            <div class="container cores-1"><span class="cor-1"></span></div>
+                            <div class="container cores-2"><span class="cor-2"></span></div>
+                            <div class="container cores-3"><span class="cor-3"></span></div>
+                            <div class="container cores-4"><span class="cor-4"></span></div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div>
+                    <img src="./img/prod-rasteirinha.png" alt="Rasteirinha">
+                    
+                    <div class="sugestao-produto-pc">
+                        <div>
+                            <p>R$ 204,90</p>
+                        </div>
+                        <div class="cores">
+                            <div class="container cores-1"><span class="cor-1"></span></div>
+                            <div class="container cores-2"><span class="cor-2"></span></div>
+                            <div class="container cores-3"><span class="cor-3"></span></div>
+                            <div class="container cores-4"><span class="cor-4"></span></div>
+                        </div>
                     </div>
                 </div>
     
                 <div>
-                    <img src="./img/prod-rasteirinha.png" alt="Rasteirinha">
-                    <p>R$ 204,90</p>
-                </div>
-    
-                <div>
                     <img src="./img/prod-rasteira.png" alt="Rasteira tira dedo">
-                    <p>R$ 204,90</p>
+                    
+                    <div class="sugestao-produto-pc">
+                        <div>
+                            <p>R$ 204,90</p>
+                        </div>
+                        <div class="cores">
+                            <div class="container cores-1"><span class="cor-1"></span></div>
+                            <div class="container cores-2"><span class="cor-2"></span></div>
+                            <div class="container cores-3"><span class="cor-3"></span></div>
+                            <div class="container cores-4"><span class="cor-4"></span></div>
+                        </div>
+                    </div>
                 </div>
     
                 <div>
                     <img src="./img/prod-bolsa mão.png" alt="Bolsa Mão">
-                    <p>R$ 204,90</p>
+                   
+                    <div class="sugestao-produto-pc">
+                        <div>
+                            <p>R$ 204,90</p>
+                        </div>
+                        <div class="cores">
+                            <div class="container cores-1"><span class="cor-1"></span></div>
+                            <div class="container cores-2"><span class="cor-2"></span></div>
+                            <div class="container cores-3"><span class="cor-3"></span></div>
+                            <div class="container cores-4"><span class="cor-4"></span></div>
+                        </div>
+                    </div>
                 </div>
                 
-               <!--  <div>
+          <!--  <div>
                     <img src="./img/prod-rasteirinha.png" alt="Rasteirinha">
-                    <p>R$ 204,90</p>
+
+                    <div class="sugestao-produto-pc">
+                        <div>
+                            <p>R$ 204,90</p>
+                        </div>
+                        <div class="cores">
+                            <div class="container cores-1"><span class="cor-1"></span></div>
+                            <div class="container cores-2"><span class="cor-2"></span></div>
+                            <div class="container cores-3"><span class="cor-3"></span></div>
+                            <div class="container cores-4"><span class="cor-4"></span></div>
+                        </div>
+                    </div>
                 </div>
     
                 <div>
                     <img src="./img/prod-bolsa.png" alt="Bolsa">
-                    <p>R$ 204,90</p>
+
+                    <div class="sugestao-produto-pc">
+                        <div>
+                            <p>R$ 204,90</p>
+                        </div>
+                        <div class="cores">
+                            <div class="container cores-1"><span class="cor-1"></span></div>
+                            <div class="container cores-2"><span class="cor-2"></span></div>
+                            <div class="container cores-3"><span class="cor-3"></span></div>
+                            <div class="container cores-4"><span class="cor-4"></span></div>
+                        </div>
+                    </div>
                 </div> -->
             </div>
 
@@ -478,6 +559,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie massa in nunc condimentum, vel placerat lacus pulvinar. Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc semper leo nec tellus gravida faucibus.</p>
             <img src="./img/logo-footer.png" alt="">
         </footer>
+
+        <script src="./scripts/script.js"></script>
 
 </body>
 </html>
